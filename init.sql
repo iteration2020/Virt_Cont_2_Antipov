@@ -10,5 +10,5 @@ CREATE TABLE houseprices (
     Area_in_marla numeric
 );
 
-COPY houseprices(id, property_type, price, location, city, baths, purpose, bedrooms, Area_in_Marla)
+COPY houseprices(id, property_type, price, location, city, baths, purpose, bedrooms, Area_in_marla)
 FROM '/house_prices.csv' DELIMITER ',' CSV HEADER;

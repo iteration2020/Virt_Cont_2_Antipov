@@ -3,7 +3,7 @@ from pyspark.sql.functions import mean, round
 
 spark = SparkSession.builder.master('spark://spark-master:7077').appName("AntipovAV_HousePrice").getOrCreate()
 
-db_url = "jdbc:postgresql://postgres:5432/mydb"
+db_url = "jdbc:postgresql://psql:5432/mydb"
 con_props = {
     "user": "arantipov",
     "password": "mypassword",
