@@ -14,7 +14,7 @@ df = spark.read.jdbc(url=db_url, table="houseprices", properties=con_props)
 
 query_result = df.filter(df["property_type"].isin('House', 'Flat')). \
     groupBy('city', 'location', 'bedrooms').agg(round(mean("price"), 2).alias("AVG Price")). \
-    orderBy(["city", "location", "bedrooms"], ascending=[True, True, True])
+    orderBy(["city", "location", "bedrooms","AVG Price"], ascending=[False, False, False, True])
 
 query_result.show()
 
